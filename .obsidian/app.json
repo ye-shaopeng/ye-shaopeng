@@ -1,0 +1,13 @@
+{
+  "focusNewTab": false,
+  "defaultViewMode": "preview",
+  "livePreview": false,
+  "strictLineBreaks": true,
+  "showLineNumber": true,
+  "useTab": false,
+  "spellcheck": false,
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "showInlineTitle": false
+}
