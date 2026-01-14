@@ -10,5 +10,10 @@
   "templater-obsidian",
   "inline-code-copy",
   "obsidian-outliner",
-  "obsidian-linter"
+  "obsidian-linter",
+  "various-complements",
+  "restore-tab-key",
+  "table-editor-obsidian",
+  "obsidian-latex-suite",
+  "tag-wrangler"
 ]
