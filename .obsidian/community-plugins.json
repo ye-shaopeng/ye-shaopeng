@@ -6,5 +6,9 @@
   "editor-width-slider",
   "open-tab-settings",
   "obsidian-show-file-path",
-  "last-modified-timestamp-in-status-bar"
+  "last-modified-timestamp-in-status-bar",
+  "templater-obsidian",
+  "inline-code-copy",
+  "obsidian-outliner",
+  "obsidian-linter"
 ]
