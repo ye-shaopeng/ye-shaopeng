@@ -1,0 +1,86 @@
+body {
+    /* --tab-stacked-header-width: var(--header-height); */
+    --tab-stacked-header-width: calc(var(--header-height) * 0.5);
+}
+
+/* === 提升可读范围 === */
+/* --- 标签页 --- */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
+    max-width: var(--file-line-width);
+    /* width: calc(var(--file-line-width) * 0.95); */
+    width: var(--file-line-width);
+}
+/* --- 编辑视图 --- */
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller,
+/* --- 阅读视图 --- */
+.markdown-preview-view {
+    /* padding: var(--file-margins); */
+    padding-top: var(--file-margins-y);
+    padding-bottom: var(--file-margins-y);
+    padding-left: calc(var(--file-margins-x) - var(--tab-stacked-header-width));
+    padding-right: calc(var(--file-margins-x) - var(--tab-stacked-header-width));
+}
+
+/* === 隐藏 标题前的折叠图标 === */
+.heading-collapse-indicator.collapse-indicator.collapse-icon {
+    opacity: 0;
+}
+
+/* === 隐藏 tab的标头 === */
+/* --- tab的标头 --- */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
+    width: var(--tab-stacked-header-width);
+}
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container :is(
+/* --- 关闭按钮 --- */
+.workspace-tab-header-inner-close-button,
+/* --- 文件图标 --- */
+.workspace-tab-header-inner-icon,
+/* --- 文件标题 --- */
+.workspace-tab-header-inner-title) {
+    opacity: 0 !important;
+}
+
+/* === 修复 非第一个标签页的左下角圆角半径 === */
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
+    border-bottom-left-radius: var(--card-border-radius-light, 8px);
+}
+
+/* === 底部状态栏 === */
+/* --- Editor Width Slider --- */
+.status-bar-item.plugin-editor-width-slider {
+    position: fixed;
+    left: 41px;
+}
+/* --- Show Current File Path --- */
+.workspace-tab-header-new-tab:has(.clickable-icon[aria-label="新标签页"]) {
+    display: none;
+}
+.status-bar-item.plugin-obsidian-show-file-path.mod-clickable {
+    position: fixed;
+    top: 10px;
+    left: 41px;
+}
+.app-container:has(.workspace-leaf.mod-active :is(
+    .workspace-leaf-content[data-type="webviewer"],
+    .workspace-leaf-content[data-type="empty"]
+)) .status-bar-item.plugin-obsidian-show-file-path.mod-clickable {
+    display: none;
+}
+/* --- Last Modified Timestamp in Status Bar --- */
+.status-bar-item.plugin-last-modified-timestamp-in-status-bar {
+    position: fixed;
+    top: 10px;
+    right: 400px;
+    transition: transform 0.5s ease;
+}
+.app-container:has(.workspace-leaf.mod-active :is(
+    .workspace-leaf-content[data-type="webviewer"],
+    .workspace-leaf-content[data-type="empty"]
+)) .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
+    display: none;
+}
+.app-container:has(.workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed)
+.status-bar-item.plugin-last-modified-timestamp-in-status-bar {
+    transform: translateX(204px);
+}

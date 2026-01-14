@@ -5,5 +5,8 @@
   "textFontFamily": "霞鹜文楷等宽",
   "monospaceFontFamily": "JetBrains Mono,霞鹜文楷等宽",
   "baseFontSize": 20,
-  "showViewHeader": false
+  "showViewHeader": false,
+  "enabledCssSnippets": [
+    "堆叠标签页"
+  ]
 }
