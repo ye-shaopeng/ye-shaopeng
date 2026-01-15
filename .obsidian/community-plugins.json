@@ -21,5 +21,16 @@
   "calendar",
   "pomodoro-timer",
   "obsidian-tracker",
-  "obsidian-checklist-plugin"
+  "obsidian-checklist-plugin",
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-excalidraw-plugin",
+  "file-explorer-note-count",
+  "obsidian-git",
+  "obsidian-image-toolkit",
+  "link-preview",
+  "mysnippets-plugin",
+  "pinned-notes",
+  "ribbon-divider",
+  "statusbar-organizer",
+  "webviewer-bookmarks"
 ]

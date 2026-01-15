@@ -1,0 +1,7 @@
+{
+  "aestheticStyle": true,
+  "snippetViewPosition": "left",
+  "openSnippetFile": true,
+  "stylingTemplate": ".workspace-leaf-content[data-type=\"file-explorer\"] .tree-item-self[data-path^=\"\"] {\n    display: none;\n}",
+  "snippetEnabledStatus": false
+}
