@@ -1,0 +1,16 @@
+{
+  "todoPageName": "do\ni0\ni1\ni2\ni3\ni4\ni5\ni6\ni7\ni8\ni9\nk0\nk1\nk2\nk3\nk4\nk5\nk6\nk7\nk8\nk9\nw0\nw1\nw2\nw3\nw4\nw5\nw6\nw7\nw8\nw9",
+  "showChecked": false,
+  "showAllTodos": false,
+  "showOnlyActiveFile": false,
+  "autoRefresh": true,
+  "subGroups": false,
+  "groupBy": "tag",
+  "sortDirectionItems": "a->z",
+  "sortDirectionGroups": "a->z",
+  "sortDirectionSubGroups": "new->old",
+  "includeFiles": "",
+  "lookAndFeel": "classic",
+  "_collapsedSections": [],
+  "_hiddenTags": []
+}

@@ -1,0 +1,19 @@
+{
+  "workLen": 30,
+  "breakLen": 5,
+  "autostart": true,
+  "useStatusBarTimer": true,
+  "notificationSound": true,
+  "customSound": "00/00-000-01/00-000-01-03/铃声.wav",
+  "showTaskProgress": true,
+  "enableTaskTracking": false,
+  "logFile": "DAILY",
+  "logFocused": false,
+  "logPath": "",
+  "logLevel": "WORK",
+  "logTemplate": "<%*\nconst dailyNoteFormat = \"Y-MM-DD\";\nif (log.mode == \"WORK\" && log.finished) {\n    tR = `- [x] %% ${log.begin.format(dailyNoteFormat)} %%[${log.begin.format(\"HH:mm\")} - ${log.end.format(\"HH:mm\")}] [波莫多罗] [${log.duration}分钟]`;\n}\n%>",
+  "logFormat": "CUSTOM",
+  "useSystemNotification": true,
+  "taskFormat": "TASKS",
+  "lowFps": false
+}

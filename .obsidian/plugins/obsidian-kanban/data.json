@@ -1,0 +1,12 @@
+{
+  "show-checkboxes": true,
+  "new-card-insertion-method": "prepend",
+  "move-tags": true,
+  "tag-action": "kanban",
+  "move-dates": true,
+  "date-format": "Y-MM-DD",
+  "date-display-format": "Y-MM-DD",
+  "link-date-to-daily-note": true,
+  "show-archive-all": false,
+  "show-set-view": false
+}

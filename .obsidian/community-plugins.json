@@ -15,5 +15,11 @@
   "restore-tab-key",
   "table-editor-obsidian",
   "obsidian-latex-suite",
-  "tag-wrangler"
+  "tag-wrangler",
+  "obsidian-kanban",
+  "periodic-notes",
+  "calendar",
+  "pomodoro-timer",
+  "obsidian-tracker",
+  "obsidian-checklist-plugin"
 ]
