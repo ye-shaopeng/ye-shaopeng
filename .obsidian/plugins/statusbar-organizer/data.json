@@ -3,7 +3,56 @@
   "activeFullscreenPreset": "Default",
   "separateFullscreenPreset": false,
   "presets": {
-    "Default": {}
+    "Default": {
+      "plugin-backlink;1": {
+        "position": 4,
+        "visible": true
+      },
+      "plugin-editor-status;1": {
+        "position": 2,
+        "visible": true
+      },
+      "plugin-word-count;1": {
+        "position": 5,
+        "visible": true
+      },
+      "plugin-editor-width-slider;1": {
+        "position": 6,
+        "visible": true
+      },
+      "plugin-obsidian-show-file-path;1": {
+        "position": 7,
+        "visible": true
+      },
+      "plugin-last-modified-timestamp-in-status-bar;1": {
+        "position": 8,
+        "visible": true
+      },
+      "plugin-last-modified-timestamp-in-status-bar;2": {
+        "position": 9,
+        "visible": true
+      },
+      "plugin-various-complements;1": {
+        "position": 3,
+        "visible": true
+      },
+      "plugin-pomodoro-timer;1": {
+        "position": 10,
+        "visible": true
+      },
+      "plugin-obsidian-git;1": {
+        "position": 0,
+        "visible": true
+      },
+      "plugin-mysnippets-plugin-MiniSettings-statusbar-button;1": {
+        "position": 11,
+        "visible": true
+      },
+      "plugin-obsidian-git;2": {
+        "position": 1,
+        "visible": true
+      }
+    }
   },
   "presetsOrder": [
     "Default"

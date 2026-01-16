@@ -1,0 +1,28 @@
+{
+  "bookmarks": [
+    {
+      "url": "https://github.com/ye-shaopeng/ye-shaopeng",
+      "title": "ye-shaopeng",
+      "ribbon": true,
+      "command": false,
+      "newTab": false,
+      "lucide": "github"
+    },
+    {
+      "url": "https://gemini.google.com/app",
+      "title": "gemini",
+      "ribbon": true,
+      "command": false,
+      "newTab": false,
+      "lucide": "bot"
+    },
+    {
+      "url": "https://chat.baidu.com/search?isShowHello=1&pd=csaitab&setype=csaitab&extParamsJson=%7B%22enter_type%22%3A%22home_tab%22%7D",
+      "title": "deepseek",
+      "ribbon": true,
+      "command": false,
+      "newTab": false,
+      "lucide": "bot-message-square"
+    }
+  ]
+}
