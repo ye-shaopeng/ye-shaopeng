@@ -1,0 +1,142 @@
+/* === 内部链接 装饰 === */
+/* --- 编辑视图 wiki链接 管道 --- */
+.cm-hmd-internal-link.cm-link-alias-pipe {
+    color: var(--text-faint) !important;
+}
+/* --- 编辑视图 wiki链接 别名 --- */
+.cm-hmd-internal-link.cm-link-alias {
+    color: var(--text-normal) !important;
+}
+/* --- 编辑视图 markdown链接 方括号 --- */
+.cm-formatting.cm-formatting-link.cm-link {
+    color: var(--text-faint) !important;
+}
+/* --- 编辑视图 markdown链接 别名 --- */
+.cm-link {
+    color: var(--text-normal) !important;
+    border: none !important;
+}
+/* --- 编辑视图 markdown链接 粗体 --- */
+.cm-link.cm-strong .cm-underline {
+    color: var(--bold-color) !important;
+}
+/* --- 编辑视图 markdown链接 斜体 --- */
+.cm-link.cm-em .cm-underline {
+    color: var(--italic-color) !important;
+}
+/* --- 编辑视图 markdown链接 内联代码 --- */
+.cm-link.cm-inline-code,
+.cm-link.cm-inline-code .cm-underline {
+    color: var(--inline-code-normal) !important;
+}
+/* --- 装饰 --- */
+/* 编辑视图 */
+.cm-underline,
+/* 阅读视图 */
+.internal-link {
+    color: var(--text-normal) !important;
+    border-bottom: 1px solid var(--link-color);
+    border-radius: 0px !important;
+}
+/* 编辑视图 悬停 */
+.cm-underline:hover,
+/* 阅读视图 悬停 */
+.internal-link:hover {
+    border-bottom-width: 2px;
+    border-color: var(--link-color-hover);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 外部链接 装饰 === */
+/* --- 编辑视图 图标 --- */
+.cm-url.cm-string + .cm-url.cm-string.external-link {
+    border: none;
+}
+/* --- 装饰 --- */
+/* 阅读视图 */
+.external-link {
+    color: var(--text-normal) !important;
+    border-bottom: 1px solid var(--link-external-color);
+    border-radius: 0px !important;
+}
+/* 阅读视图 悬停 */
+.external-link:hover {
+    border-bottom-width: 2px;
+    border-color: var(--link-external-color-hover);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 链接 + 代码/图片 后缀 === */
+.internal-link[href*=".java"]::after,
+a[href*=".java"]::after,
+.internal-link[href*=".sql"]::after,
+a[href*=".sql"]::after,
+.internal-link[href*=".bash"]::after,
+a[href*=".bash"]::after,
+.internal-link[href*=".shell"]::after,
+a[href*=".shell"]::after,
+.internal-link[href*=".xml"]::after,
+a[href*=".xml"]::after,
+.internal-link[href*=".js"]::after,
+a[href*=".js"]::after,
+.internal-link[href*=".json"]::after,
+a[href*=".json"]::after,
+.internal-link[href*=".prop"]::after,
+a[href*=".prop"]::after,
+.internal-link[href*=".css"]::after,
+a[href*=".css"]::after,
+.internal-link[href$=".svg"]::after,
+a[href$=".svg"]::after,
+.internal-link[href$=".png"]::after,
+a[href$=".png"]::after,
+.internal-link[href$=".jpg"]::after,
+a[href$=".jpg"]::after {
+    font-size: 70%;
+    color: var(--link-color);
+}
+.internal-link[href*=".java"]::after,
+a[href*=".java"]::after {
+    content: " java";
+}
+.internal-link[href*=".sql"]::after,
+a[href*=".sql"]::after {
+    content: " sql";
+}
+.internal-link[href*=".bash"]::after,
+a[href*=".bash"]::after {
+    content: " bash";
+}
+.internal-link[href*=".shell"]::after,
+a[href*=".shell"]::after {
+    content: " shell";
+}
+.internal-link[href*=".xml"]::after,
+a[href*=".xml"]::after {
+    content: " xml";
+}
+.internal-link[href*=".js"]::after,
+a[href*=".js"]::after {
+    content: " js";
+}
+.internal-link[href*=".json"]::after,
+a[href*=".json"]::after {
+    content: " json";
+}
+.internal-link[href*=".prop"]::after,
+a[href*=".prop"]::after {
+    content: " prop";
+}
+.internal-link[href*=".css"]::after,
+a[href*=".css"]::after {
+    content: " css";
+}
+.internal-link[href$=".svg"]::after,
+a[href$=".svg"]::after,
+.internal-link[href$=".png"]::after,
+a[href$=".png"]::after,
+.internal-link[href$=".jpg"]::after,
+a[href$=".jpg"]::after {
+    content: " img";
+}

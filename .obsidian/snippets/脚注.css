@@ -1,0 +1,11 @@
+/* === 页面预览 隐藏脚注 === */
+.popover.hover-popover .el-section .footnotes {
+    display: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 隐藏脚注上方的空白 === */
+.popover.hover-popover:has(.el-section .footnotes) :is(.el-p p, .el-pre pre, .el-table table, .el-ul ul, .el-ol ol) {
+    margin-bottom: 0;
+}

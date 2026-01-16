@@ -1,0 +1,9 @@
+/* === 隐藏 功能区 === */
+.clickable-icon.side-dock-ribbon-action[aria-label="打开快速切换"],
+.clickable-icon.side-dock-ribbon-action[aria-label="打开命令面板"],
+.clickable-icon.side-dock-ribbon-action[aria-label="Templater"],
+.clickable-icon.side-dock-ribbon-action[aria-label="Toggle timer panel"],
+.clickable-icon.side-dock-ribbon-action[aria-label="Open Git source control"],
+.clickable-icon.side-dock-ribbon-action[aria-label="Open today"] {
+    display: none;
+}

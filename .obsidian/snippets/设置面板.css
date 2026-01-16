@@ -1,0 +1,15 @@
+/* === 设置项 已激活装饰 === */
+body.mod-windows:not(.windows-mode-off):not(.is-mobile) .modal.mod-settings .vertical-tab-nav-item {
+    position: relative;
+    padding: 8px 16px;
+}
+body.mod-windows:not(.windows-mode-off):not(.is-mobile) .vertical-tab-nav-item.is-active::after {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 0px;
+    border-radius: 2px;
+    background-color: var(--interactive-accent);
+    width: 4px;
+    content: "";
+}

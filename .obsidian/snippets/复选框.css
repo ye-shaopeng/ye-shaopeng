@@ -1,0 +1,32 @@
+/* === 复选框 完成装饰 === */
+body {
+    /* --checklist-done-decoration: line-through; */
+    --checklist-done-decoration: none;
+}
+/* --- 复选框 + 内联代码 完成装饰 --- */
+/* 编辑视图 */
+.cm-line[data-task="x"] .cm-inline-code,
+/* 阅读视图 */
+.task-list-item.is-checked code {
+    color: var(--checklist-done-color) !important;
+}
+/* --- 复选框 + 内部链接 完成装饰 --- */
+/* 编辑视图 内联代码 */
+.cm-line[data-task="x"] .cm-link.cm-inline-code {
+    color: var(--inline-code-normal) !important;
+}
+/* 编辑视图 */
+.cm-line[data-task="x"] .cm-underline,
+/* 编辑视图 内联代码 */
+.cm-line[data-task="x"] .cm-link.cm-inline-code .cm-underline,
+/* 阅读视图 */
+.task-list-item.is-checked .internal-link,
+/* 阅读视图 内联代码 */
+.task-list-item.is-checked .internal-link code {
+    color: var(--checklist-done-color) !important;
+}
+/* --- 复选框 + 外部链接 完成装饰 --- */
+/* 阅读视图 */
+.task-list-item.is-checked .external-link {
+    color: var(--checklist-done-color) !important;
+}
