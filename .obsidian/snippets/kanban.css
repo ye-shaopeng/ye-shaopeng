@@ -1,0 +1,21 @@
+/* === 看板项 装饰 === */
+.kanban-plugin__item-title-wrapper {
+    background: var(--background-secondary);
+}
+.kanban-plugin__lane-wrapper {
+    width: fit-content;
+}
+.kanban-plugin__lane-items.kanban-plugin__vertical.kanban-plugin__scroll-container,
+.kanban-plugin__item-wrapper {
+    min-width: var(--lane-width);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 折叠看板 列标题 & 卡片计数 的旋转角度 === */
+.kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-text {
+    transform: rotate(360deg);
+}
+.kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-count {
+    transform: rotate(270deg);
+}

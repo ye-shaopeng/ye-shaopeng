@@ -1,0 +1,4 @@
+/* === 隐藏报错“No valid Y value found in notes” === */
+.block-language-tracker div[style="background-color: white; margin-bottom: 20px; padding: 10px; color: red;"] {
+    display: none;
+}

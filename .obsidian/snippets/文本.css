@@ -1,0 +1,52 @@
+/* === 粗体 装饰 === */
+/* 编辑视图 */
+.cm-strong,
+/* 阅读视图 */
+/* b, */
+strong {
+    /* font-weight: normal; */
+    color: var(--bold-color) !important;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 斜体 装饰 === */
+/* 编辑视图 */
+.cm-em,
+/* 阅读视图 */
+em {
+    /* font-style: italic; */
+    font-style: normal;
+    color: var(--italic-color) !important;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 内联代码 装饰 === */
+/* 编辑视图 */
+.cm-inline-code,
+/* 阅读视图 */
+code {
+    font-family: var(--font-monospace);
+    color: var(--inline-code-normal);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 粗体 + 内联代码 字体颜色 === */
+/* 编辑视图 */
+.cm-strong.cm-inline-code,
+/* 阅读视图 */
+strong code {
+    color: var(--bold-color) !important;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 斜体 + 内联代码 字体颜色 === */
+/* 编辑视图 */
+.cm-em.cm-inline-code,
+/* 阅读视图 */
+em code {
+    color: var(--italic-color) !important;
+}

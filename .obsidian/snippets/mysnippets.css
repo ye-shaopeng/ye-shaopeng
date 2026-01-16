@@ -1,0 +1,18 @@
+/* === 底部状态栏 隐藏图标 === */
+.status-bar-item.plugin-mysnippets-plugin.MiniSettings-statusbar-button.mod-clickable {
+    display: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 菜单 装饰 === */
+.menu.MySnippets-statusbar-menu {
+    position: fixed;
+    left: 4% !important;
+}
+.MS-OpenSnippet {
+    background-color: var(--color-accent) !important;
+}
+path[d="M7.375 16.781l1.25-1.562L4.601 12l4.024-3.219l-1.25-1.562l-5 4a1 1 0 0 0 0 1.562l5 4zm9.25-9.562l-1.25 1.562L19.399 12l-4.024 3.219l1.25 1.562l5-4a1 1 0 0 0 0-1.562l-5-4zm-1.649-4.003l-4 18l-1.953-.434l4-18z"] {
+    fill: white !important;
+}

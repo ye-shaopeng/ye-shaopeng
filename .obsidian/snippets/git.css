@@ -1,0 +1,20 @@
+/* === source control view 隐藏按钮 === */
+.clickable-icon.nav-action-button[aria-label="Commit-and-sync"],
+/* .clickable-icon.nav-action-button[aria-label="Commit"], */
+.clickable-icon.nav-action-button[aria-label="Stage all"],
+.clickable-icon.nav-action-button[aria-label="Unstage all"],
+/* .clickable-icon.nav-action-button[aria-label="Push"], */
+/* .clickable-icon.nav-action-button[aria-label="Pull"], */
+/* .git-commit-msg.svelte-11adhly, */
+.clickable-icon[aria-label="Unstage"],
+.clickable-icon[aria-label="Discard"],
+.clickable-icon[aria-label="Stage"] {
+    display: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === history view 文本换行 === */
+.workspace-leaf-content[data-type="git-history-view"] .tree-item-inner.nav-folder-title-content {
+    white-space: pre-wrap;
+}

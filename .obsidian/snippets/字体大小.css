@@ -1,0 +1,8 @@
+/* === 字体大小 === */
+body {
+    /* --nav-item-size: var(--font-ui-small); */
+    --nav-item-size: calc(var(--font-text-size) * 0.7);
+
+    /* --status-bar-font-size: var(--font-ui-smaller); */
+    --status-bar-font-size: calc(var(--font-text-size) * 0.7);
+}

@@ -20,6 +20,18 @@
     "脚注",
     "内嵌文档",
     "设置面板",
-    "图片"
+    "图片",
+    "文本",
+    "文件列表",
+    "页面预览",
+    "专注模式",
+    "字体大小",
+    "checklist",
+    "folder_notes",
+    "git",
+    "kanban",
+    "mysnippets",
+    "pomodoro_timer",
+    "tracker"
   ]
 }

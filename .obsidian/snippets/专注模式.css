@@ -1,0 +1,11 @@
+/* === 活动行 背景色 === */
+.theme-light.css-settings-manager {
+    --line-active-bg: hsla(var(--accent-h), 6%, 64%, 0.15);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 活动行 代码块 圆角大小 === */
+.border-focus-mode .markdown-source-view .cm-scroller .cm-line.cm-active.HyperMD-codeblock-bg:not(.HyperMD-codeblock-begin-bg, .HyperMD-codeblock-end-bg) {
+    border-radius: var(--radius-s);
+}

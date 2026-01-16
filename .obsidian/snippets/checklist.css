@@ -1,0 +1,42 @@
+/* === 搜索框 装饰 === */
+.search.svelte-rdace4.svelte-rdace4 {
+    /* margin-right: -8px !important; */
+    margin-right: -10px !important;
+    font-family: var(--font-text-override);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 任务项 字体大小 === */
+.classic.svelte-sx5ktw,
+.classic.svelte-sx5ktw code {
+    font-size: 87.5%;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 任务项 完成装饰 === */
+.classic.svelte-sx5ktw:has(.svelte-1wagsqu.checked) .content.svelte-sx5ktw :is(
+/* 段落 */
+p,
+/* 段落 + 内联代码 */
+p code,
+/* 内部链接 */
+a,
+/* 内部链接 + 内联代码 */
+a code) {
+    color: var(--checklist-done-color) !important;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 任务项 + 内部链接 装饰 === */
+.classic.svelte-sx5ktw .content.svelte-sx5ktw a {
+    color: var(--text-normal) !important;
+    border-bottom: 1px solid var(--link-color);
+    border-radius: 0px !important;
+}
+.classic.svelte-sx5ktw .content.svelte-sx5ktw a:hover {
+    border-bottom-width: 2px;
+    border-color: var(--link-color-hover);
+}

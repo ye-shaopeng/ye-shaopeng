@@ -1,0 +1,53 @@
+/* === 页面预览 根据内容自动调整尺寸 === */
+body {
+    --popover-width: fit-content;
+    --popover-height: fit-content;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 编辑视图的最小宽度 === */
+.popover.hover-popover > .markdown-embed .markdown-source-view {
+    min-width: 80vh;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 阅读视图的最小宽度 === */
+.popover.hover-popover .markdown-preview-view {
+    min-width: 30vh;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 装饰 === */
+.popover.hover-popover > .markdown-embed .markdown-source-view,
+.popover.hover-popover .markdown-preview-view {
+    max-height: 70vh;
+    /* background-color: var(--background-underlying); */
+    font-size: calc(var(--font-text-size) * 0.9);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 图片的最大宽度 === */
+/* .popover.hover-popover .media-embed.image-embed.is-loaded {
+    max-width: 93vh;
+} */
+.popover.hover-popover img {
+    max-width: 500px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 隐藏打开链接 === */
+.markdown-embed-link, .file-embed-link {
+    display: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 页面预览 隐藏笔记属性空白 === */
+.popover.hover-popover .metadata-container.is-collapsed {
+    display: none;
+}

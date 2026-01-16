@@ -1,0 +1,10 @@
+/* === folder note 文件项 已激活装饰 === */
+body:not(.disable-folder-highlight) .tree-item-self.fn-is-active {
+    border-radius: 6px !important;
+    /* background: var(--background-primary) !important; */
+    box-shadow: var(--shadow-activated-tab-header-light) !important;
+}
+.tree-item.nav-file:has(.tree-item-self.nav-file-title.tappable.is-clickable.is-folder-note.is-active) {
+    /* box-shadow: var(--shadow-activated-tab-header-light) !important; */
+    box-shadow: none !important;
+}

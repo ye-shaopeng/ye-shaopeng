@@ -1,0 +1,28 @@
+/* === timer panel === */
+/* --- 隐藏tasks --- */
+.control.svelte-1bkzjfd svg[class="lucide lucide-list-todo svelte-1bkzjfd"],
+.pomodoro-tasks-wrapper.svelte-1ipipwe {
+    display: none;
+}
+.btn-group.svelte-1bkzjfd {
+    margin-left: -36px;
+}
+/* --- settings --- */
+.pomodoro-settings-item.svelte-5jyrhn input[type='number'].svelte-5jyrhn {
+    margin-left: -38px;
+}
+.pomodoro-settings-item.svelte-5jyrhn
++ .pomodoro-settings-item.svelte-5jyrhn
++ .pomodoro-settings-item.svelte-5jyrhn
++ .pomodoro-settings-item.svelte-5jyrhn
++ .pomodoro-settings-item.svelte-5jyrhn {
+    display: none !important;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 底部状态栏 === */
+.status-bar-item.plugin-pomodoro-timer.mod-clickable {
+    position: fixed;
+    left: 240px;
+}
