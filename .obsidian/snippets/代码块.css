@@ -1,0 +1,96 @@
+/* === 代码块 定义颜色 === */
+:root {
+    --color-code: #000000;
+    --codeblock-variable: var(--color-code);
+    --codeblock-namespace: var(--color-code);
+    --codeblock-def-type-classname: var(--color-code);
+    --codeblock-punctuation: var(--color-code);
+    --codeblock-keyword: #0033b3;
+    --codeblock-function: #00627a;
+    --codeblock-doccomment: #8c8c8c;
+    --codeblock-comment: #8c8c8c;
+    --codeblock-annotation: #9e880d;
+    --codeblock-operator: #dd1399;
+    --codeblock-number: #1750eb;
+    --codeblock-string: #067d17;
+    --codeblock-boolean: var(--codeblock-keyword);
+    --codeblock-constant: var(--color-code);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 代码块 装饰 === */
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+    letter-spacing: 0em;
+
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+
+    color: var(--color-code);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 代码块 字体颜色 === */
+.cm-hmd-codeblock.cm-variable,
+.token.variable {
+    color: var(--codeblock-variable) !important;
+}
+.token.namespace {
+    opacity: 1.0;
+    color: var(--codeblock-namespace) !important;
+}
+.cm-hmd-codeblock.cm-def,
+.cm-hmd-codeblock.cm-type,
+.token.class-name,
+.token.property, .token.selector, .token.class {
+    color: var(--codeblock-def-type-classname) !important;
+}
+.cm-hmd-codeblock,
+.token.punctuation {
+    color: var(--codeblock-punctuation) !important;
+}
+.cm-hmd-codeblock.cm-keyword,
+.token.keyword {
+    color: var(--codeblock-keyword) !important;
+}
+.token.function {
+    color: var(--codeblock-function) !important;
+    font-weight: bold;
+}
+.token.doc-comment.comment {
+    font-style: italic;
+    color: var(--codeblock-doccomment) !important;
+}
+.cm-hmd-codeblock.cm-comment,
+.token.comment {
+    font-style: italic;
+    color: var(--codeblock-comment) !important;
+}
+.cm-hmd-codeblock.cm-meta,
+.token.annotation.punctuation {
+    color: var(--codeblock-annotation) !important;
+}
+.cm-hmd-codeblock.cm-operator,
+.token.operator {
+    color: var(--codeblock-operator) !important;
+}
+.cm-hmd-codeblock.cm-number,
+.token.number {
+    color: var(--codeblock-number) !important;
+}
+.cm-hmd-codeblock.cm-string,
+.token.string,
+.token.char {
+    color: var(--codeblock-string) !important;
+}
+.cm-hmd-codeblock.cm-atom,
+.token.boolean {
+    color: var(--codeblock-boolean) !important;
+}
+.token.constant {
+    color: var(--codeblock-constant) !important;
+}

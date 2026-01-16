@@ -7,6 +7,12 @@
   "baseFontSize": 20,
   "showViewHeader": false,
   "enabledCssSnippets": [
+    "笔记属性",
+    "标签",
+    "标题",
+    "表格",
+    "菜单分栏",
+    "代码块",
     "堆叠标签页"
   ]
 }

@@ -1,0 +1,41 @@
+/* === 菜单分栏 === */
+.menu > .menu-scroll {
+    .menu-item {
+        flex: 0 0 fit-content;
+        max-width: 300px;
+
+        .menu-item-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    /* --- 菜单项超过20个时，自动切换为2列 --- */
+    &:has(.menu-group:nth-child(n + 10)),
+    &:has(> .menu-group > .menu-item:nth-child(n + 20)) {
+        display: block;
+        columns: 2;
+        gap: 25px;
+        column-rule: 2px solid var(--background-modifier-border);
+        width: fit-content;
+    }
+
+    /* --- 菜单项超过40个时，自动切换为3列 --- */
+    &:has(.menu-group:nth-child(n + 20)),
+    &:has(> .menu-group > .menu-item:nth-child(n + 40)) {
+        columns: 3;
+    }
+
+    /* --- 菜单项超过60个时，自动切换为4列 --- */
+    &:has(.menu-group:nth-child(n + 30)),
+    &:has(> .menu-group > .menu-item:nth-child(n + 60)) {
+        columns: 4;
+    }
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === MySnippets === */
+.menu.MySnippets-statusbar-menu {
+    width: fit-content;
+}

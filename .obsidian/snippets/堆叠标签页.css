@@ -3,11 +3,12 @@ body {
     --tab-stacked-header-width: calc(var(--header-height) * 0.5);
 }
 
+/* ------------------------------------------------------------------ */
+
 /* === 提升可读范围 === */
 /* --- 标签页 --- */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
     max-width: var(--file-line-width);
-    /* width: calc(var(--file-line-width) * 0.95); */
     width: var(--file-line-width);
 }
 /* --- 编辑视图 --- */
@@ -21,10 +22,14 @@ body {
     padding-right: calc(var(--file-margins-x) - var(--tab-stacked-header-width));
 }
 
+/* ------------------------------------------------------------------ */
+
 /* === 隐藏 标题前的折叠图标 === */
 .heading-collapse-indicator.collapse-indicator.collapse-icon {
     opacity: 0;
 }
+
+/* ------------------------------------------------------------------ */
 
 /* === 隐藏 tab的标头 === */
 /* --- tab的标头 --- */
@@ -41,10 +46,14 @@ body {
     opacity: 0 !important;
 }
 
+/* ------------------------------------------------------------------ */
+
 /* === 修复 非第一个标签页的左下角圆角半径 === */
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header-inner {
     border-bottom-left-radius: var(--card-border-radius-light, 8px);
 }
+
+/* ------------------------------------------------------------------ */
 
 /* === 底部状态栏 === */
 /* --- Editor Width Slider --- */
@@ -61,10 +70,13 @@ body {
     top: 10px;
     left: 41px;
 }
-.app-container:has(.workspace-leaf.mod-active :is(
-    .workspace-leaf-content[data-type="webviewer"],
-    .workspace-leaf-content[data-type="empty"]
-)) .status-bar-item.plugin-obsidian-show-file-path.mod-clickable {
+.app-container:has(
+    .workspace-leaf.mod-active :is(
+        .workspace-leaf-content[data-type="webviewer"],
+        .workspace-leaf-content[data-type="empty"]
+    ),
+    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
+) .status-bar-item.plugin-obsidian-show-file-path.mod-clickable {
     display: none;
 }
 /* --- Last Modified Timestamp in Status Bar --- */
@@ -74,13 +86,29 @@ body {
     right: 400px;
     transition: transform 0.5s ease;
 }
-.app-container:has(.workspace-leaf.mod-active :is(
-    .workspace-leaf-content[data-type="webviewer"],
-    .workspace-leaf-content[data-type="empty"]
-)) .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
+.app-container:has(
+    .workspace-leaf.mod-active :is(
+        .workspace-leaf-content[data-type="webviewer"],
+        .workspace-leaf-content[data-type="empty"]
+    ),
+    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
+) .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
     display: none;
 }
-.app-container:has(.workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed)
-.status-bar-item.plugin-last-modified-timestamp-in-status-bar {
+.app-container:has(
+    .workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed
+) .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
     transform: translateX(204px);
+}
+/* --- 字数统计 --- */
+.app-container:has(
+    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
+) .status-bar-item.plugin-word-count {
+    display: none;
+}
+/* --- 反向链接 --- */
+.app-container:has(
+    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
+) .status-bar-item.plugin-backlink.mod-clickable {
+    display: none;
 }

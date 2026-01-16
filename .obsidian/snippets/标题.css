@@ -1,0 +1,40 @@
+/* === 标题 间距 === */
+/* --- 编辑视图 标题的内部间距 --- */
+.cm-s-obsidian .cm-line.HyperMD-header {
+    /* padding-top: var(--p-spacing); */
+    /* padding-top: calc(var(--p-spacing) * 0.5); */
+}
+/* --- 阅读视图 段落 | 代码块 | 表格 | 无序列表 | 有序列表 + 一级标题 | 二级标题 外部间距 --- */
+.markdown-rendered :is(p, pre, table, ul, ol) + :is(h1, h2),
+.markdown-rendered div:is(.el-p, .el-pre, .el-table, .el-ul, .el-ol) + div > :is(h1, h2) {
+    /* margin-top: var(--heading-spacing); */
+    margin-top: calc(var(--heading-spacing) * 0.4);
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 标题 左侧的指示器 === */
+body {
+    /* --h1-accent-color: var(--color-red); */
+    /* --h1-accent-color: #d7a668; */
+    /* --h2-accent-color: var(--color-orange); */
+    /* --h2-accent-color: #f9d49c; */
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 标题 分隔线 === */
+/* --- 编辑视图 h1分隔线 --- */
+body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1>.cm-header-1)::after,
+/* --- 阅读视图 h1分隔线 --- */
+body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1)::after {
+    /* background-image: linear-gradient(to left, var(--h1-accent-color) 30%, transparent 70%); */
+    background-image: linear-gradient(to left, var(--h1-accent-color) 30%, transparent 102%) !important;
+}
+/* --- 编辑视图 h2分隔线 --- */
+body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2>.cm-header-2)::after,
+/* --- 阅读视图 h2分隔线 --- */
+body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
+    /* background-image: linear-gradient(to left, var(--h2-accent-color) 30%, transparent 70%); */
+    background-image: linear-gradient(to left, var(--h2-accent-color) 30%, transparent 102%) !important;
+}

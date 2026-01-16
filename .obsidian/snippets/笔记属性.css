@@ -1,0 +1,16 @@
+/* === 隐藏 === */
+/* “笔记属性” */
+.metadata-properties-heading,
+/* 笔记属性键 */
+.metadata-property-key,
+/* “+添加笔记属性” */
+.metadata-add-button.text-icon-button {
+    display: none;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* === 笔记属性值 字体 === */
+.metadata-property-value {
+    font-family: var(--font-monospace);
+}

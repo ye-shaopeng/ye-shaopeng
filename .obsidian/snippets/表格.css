@@ -1,0 +1,7 @@
+/* === 阅读视图 表格的外部间距 === */
+.markdown-rendered table {
+    /* margin-block-start: var(--p-spacing); */
+    margin-block-start: calc(var(--p-spacing) * 0.3);
+    /* margin-block-end: var(--p-spacing); */
+    margin-block-end: calc(var(--p-spacing) * 0.3);
+}
