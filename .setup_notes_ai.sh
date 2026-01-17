@@ -14,8 +14,8 @@ done
 
 # 检查是否输入了路径
 if [ -z "$INPUT_PATH" ]; then
-    echo "错误: 请提供一个文件夹路径。"
-    echo "用法: $0 [-f] <文件夹路径>"
+    echo "错误：请提供一个文件夹路径。"
+    echo "用法：$0 [-f] <文件夹路径>"
     exit 1
 fi
 
@@ -23,7 +23,7 @@ BASE_PATH=$INPUT_PATH
 PARENT_NAME=$(basename "$BASE_PATH")
 
 if [ ! -d "$BASE_PATH" ]; then
-    echo "错误: 路径 $BASE_PATH 不存在。"
+    echo "错误：路径 $BASE_PATH 不存在。"
     exit 1
 fi
 
@@ -39,23 +39,23 @@ create_structure() {
     local new_file_path="${new_folder_path}/${new_folder_name}.md"
 
     echo "------------------------------------------------"
-    echo "目标: $new_folder_path"
+    echo "目标：$new_folder_path --| $md_title"
 
     # 判断是否强制执行
     if [ "$FORCE" = true ]; then
-        echo "模式: 强制创建 (-f)"
+        echo "模式：强制创建 (-f)"
         confirm="y"
     else
-        read -p "确认创建？(y/n): " confirm
+        read -p "确认创建？(y/n)：" confirm
     fi
 
     if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
         mkdir -p "$new_folder_path"
         echo -e "# $md_title" > "$new_file_path"
-        echo "状态: 已完成"
+        echo "状态：已完成"
         return 0
     else
-        echo "状态: 已跳过"
+        echo "状态：已跳过"
         return 1
     fi
 }

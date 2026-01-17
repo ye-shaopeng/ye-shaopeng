@@ -121,7 +121,7 @@
   },
   "processor": {
     "args": [
-      "const mapping = {\n    // software\n    '04': {\n        '001': 'obsidian'\n    }\n};\n\nconst match = title.match(/^\\[m\\](.+)  ([0-9]{2})-([0-9]{3})(.+)$/);\nif (match) {\n    const heading = match[1];\n    const subject = match[2];\n    const course = match[3];\n    const rest = match[4];\n    if (mapping[subject] && mapping[subject][course]) {\n        return `${heading}\\n${subject}-${mapping[subject][course]}${rest}`;\n    }\n}\nif (title.match(/^\\[m\\].+$/)) {\n    title = title.replace(\"[m]\", \"\");\n}\nreturn title.replace(\"  \", \"\\n\");"
+      "const mapping = {\n    // software\n    '04': {\n        '001': 'obsidian',\n        '002': 'vscode'\n    }\n};\n\nconst match = title.match(/^\\[m\\](.+)  ([0-9]{2})-([0-9]{3})(.+)$/);\nif (match) {\n    const heading = match[1];\n    const subject = match[2];\n    const course = match[3];\n    const rest = match[4];\n    if (mapping[subject] && mapping[subject][course]) {\n        return `${heading}\\n${subject}-${mapping[subject][course]}${rest}`;\n    }\n}\nif (title.match(/^\\[m\\].+$/)) {\n    title = title.replace(\"[m]\", \"\");\n}\nreturn title.replace(\"  \", \"\\n\");"
     ],
     "type": "function"
   }
