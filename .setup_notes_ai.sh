@@ -19,7 +19,8 @@ if [ -z "$INPUT_PATH" ]; then
     exit 1
 fi
 
-BASE_PATH=$INPUT_PATH
+# 去除末尾的斜杠
+BASE_PATH="${INPUT_PATH%/}"
 PARENT_NAME=$(basename "$BASE_PATH")
 
 if [ ! -d "$BASE_PATH" ]; then
@@ -41,7 +42,6 @@ create_structure() {
     echo "------------------------------------------------"
     echo "目标：$new_folder_path --| $md_title"
 
-    # 判断是否强制执行
     if [ "$FORCE" = true ]; then
         echo "模式：强制创建 (-f)"
         confirm="y"
@@ -63,20 +63,25 @@ create_structure() {
 # --- 执行逻辑 ---
 echo "开始构建目录结构..."
 
-# 1. attachments
-if create_structure "$BASE_PATH" "-00-01" "attachments"; then
-    ATTACH_PATH="${BASE_PATH}/${PARENT_NAME}-00-01"
-    # 2. images (在 attachments 下)
-    create_structure "$ATTACH_PATH" "-01" "images"
-    # 3. pdf (在 attachments 下)
-    create_structure "$ATTACH_PATH" "-02" "pdf"
+# 1. 创建 sources 层 (后缀 -00)
+if create_structure "$BASE_PATH" "-00" "sources"; then
+    SOURCES_PATH="${BASE_PATH}/${PARENT_NAME}-00"
+    
+    # 2. attachments (在 sources 下)
+    if create_structure "$SOURCES_PATH" "-01" "attachments"; then
+        ATTACH_PATH="${SOURCES_PATH}/$(basename "$SOURCES_PATH")-01"
+        # 3. images (在 attachments 下)
+        create_structure "$ATTACH_PATH" "-01" "images"
+        # 4. pdf (在 attachments 下)
+        create_structure "$ATTACH_PATH" "-02" "pdf"
+    fi
+
+    # 5. literature notes (在 sources 下)
+    create_structure "$SOURCES_PATH" "-02" "literature notes"
+
+    # 6. fleeting notes (在 sources 下)
+    create_structure "$SOURCES_PATH" "-03" "fleeting notes"
 fi
-
-# 4. literature notes
-create_structure "$BASE_PATH" "-00-02" "literature notes"
-
-# 5. fleeting notes
-create_structure "$BASE_PATH" "-00-03" "fleeting notes"
 
 echo "------------------------------------------------"
 echo "任务处理完毕。"
