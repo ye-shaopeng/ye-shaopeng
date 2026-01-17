@@ -110,8 +110,7 @@
                   "title": "搜索"
                 }
               }
-            ],
-            "currentTab": 1
+            ]
           },
           {
             "id": "2871da0c59ddc99e",
@@ -220,8 +219,8 @@
           "webviewer-bookmarks:Open deepseek": false
         }
       },
-      "active": "2bf3d34a143ccb66",
-      "mtime": "2026-01-16T22:00:48+08:00"
+      "active": "e17c382dbffe204b",
+      "mtime": "2026-01-17T10:26:26+08:00"
     }
   },
   "active": "初始的工作区布局"
