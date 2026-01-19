@@ -19,3 +19,11 @@
 .kanban-plugin__lane-wrapper.collapse-horizontal .kanban-plugin__lane-title-count {
     transform: rotate(270deg);
 }
+
+/* ------------------------------------------------------------------ */
+
+/* === 修复 Obsidian 1.11.4 === */
+.kanban-plugin__meta-value .markdown-preview-view,
+.kanban-plugin__markdown-preview-wrapper .markdown-preview-view {
+    padding: var(--file-margins);
+}
