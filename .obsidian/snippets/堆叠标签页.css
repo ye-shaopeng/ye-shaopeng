@@ -70,15 +70,6 @@ body {
     top: 10px;
     left: 41px;
 }
-.app-container:has(
-    .workspace-leaf.mod-active :is(
-        .workspace-leaf-content[data-type="webviewer"],
-        .workspace-leaf-content[data-type="empty"]
-    ),
-    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
-) .status-bar-item.plugin-obsidian-show-file-path.mod-clickable {
-    display: none;
-}
 /* --- Last Modified Timestamp in Status Bar --- */
 .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
     position: fixed;
@@ -87,28 +78,38 @@ body {
     transition: transform 0.5s ease;
 }
 .app-container:has(
-    .workspace-leaf.mod-active :is(
-        .workspace-leaf-content[data-type="webviewer"],
-        .workspace-leaf-content[data-type="empty"]
-    ),
-    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
-) .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
-    display: none;
-}
-.app-container:has(
     .workspace-split.mod-horizontal.mod-sidedock.mod-right-split.is-sidedock-collapsed
 ) .status-bar-item.plugin-last-modified-timestamp-in-status-bar {
     transform: translateX(204px);
 }
-/* --- 字数统计 --- */
+/* --- 隐藏 --- */
 .app-container:has(
+    .workspace-leaf.mod-active :is(
+        .workspace-leaf-content[data-type="empty"],
+        .workspace-leaf-content[data-type="webviewer"],
+        .workspace-leaf-content[data-type="split-diff-view"],
+        .workspace-leaf-content[data-type="todo"],
+        .workspace-leaf-content[data-type="file-explorer"],
+        .workspace-leaf-content[data-type="bookmarks"],
+        .workspace-leaf-content[data-type="tag"],
+        .workspace-leaf-content[data-type="search"],
+        .workspace-leaf-content[data-type="backlink"],
+        .workspace-leaf-content[data-type="outgoing-link"],
+        .workspace-leaf-content[data-type="calendar"],
+        .workspace-leaf-content[data-type="timer-view"],
+        .workspace-leaf-content[data-type="git-view"],
+        .workspace-leaf-content[data-type="git-history-view"]
+    ),
     .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
-) .status-bar-item.plugin-word-count {
-    display: none;
-}
-/* --- 反向链接 --- */
-.app-container:has(
-    .workspace-tab-header.tappable.is-active[aria-label="新标签页"]
-) .status-bar-item.plugin-backlink.mod-clickable {
+) :is(
+    /* Show Current File Path */
+    .status-bar-item.plugin-obsidian-show-file-path.mod-clickable,
+    /* Last Modified Timestamp in Status Bar */
+    .status-bar-item.plugin-last-modified-timestamp-in-status-bar,
+    /* 字数统计 */
+    .status-bar-item.plugin-word-count,
+    /* 反向链接 */
+    .status-bar-item.plugin-backlink.mod-clickable
+) {
     display: none;
 }
