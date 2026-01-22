@@ -267,12 +267,16 @@ Review(ThisHotkey) {
         Str := RegExReplace(Str, " & ", "&")
     }
 
-    ; Index Item Tag Feedback
+    ;; Index Item Tag Feedback
+    ; Item Tag Feedback
     Array := StrSplit(Str, " ")
-    Index := Array[1]
-    Item := Array[2]
-    Tag := Array[3]
-    Feedback := Array[4]
+    ; Index := Array[1]
+    ; Item := Array[2]
+    ; Tag := Array[3]
+    ; Feedback := Array[4]
+    Item := Array[1]
+    Tag := Array[2]
+    Feedback := Array[3]
     ; TypeWithEase/Time
     Array := StrSplit(Tag, "/")
     TypeWithEase := Array[1]
@@ -301,7 +305,8 @@ Review(ThisHotkey) {
     if (IsItemMultiple) {
         Item := RegExReplace(Item, "&", " & ")
     }
-    Str := Index . " " . Item . " " . Type . Ease . "/" . Time
+    ; Str := Index . " " . Item . " " . Type . Ease . "/" . Time
+    Str := Item . " " . Type . Ease . "/" . Time
 
     ; 粘贴复习字符串
     SendText Str
