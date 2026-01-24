@@ -295,6 +295,13 @@
       "replace": "![[$1]]",
       "flags": "gm",
       "enabled": true
+    },
+    {
+      "label": "代码块 去除末尾空格",
+      "find": "[ ]+$",
+      "replace": "",
+      "flags": "gm",
+      "enabled": true
     }
   ],
   "commonStyles": {
